@@ -1,0 +1,15 @@
+{
+  "name": "my-plugin",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./out",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "@types/node": "^18.16.16",
+    "comment-json": "^4.2.3",
+    "strip-json-comments": "^5.0.0",
+    "typescript": "^5.0.4"
+  }
+}
