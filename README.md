@@ -29,3 +29,9 @@ npm i nx-import-filter
   }
 }
 ```
+
+add the following into VSCode settings.json
+
+```json
+  "typescript.tsserver.pluginPaths": ["./node_modules"]
+```
