@@ -48,15 +48,15 @@ function init(modules: { typescript: typeof ts }) {
 
     const { linter, baseConfig } = getEslintData(eslintConfig, workspaceRoot);
 
-    log(
-      info,
-      `${{
-        projectGraph: (global as any).projectGraph,
-        projectFileMap: (global as any).projectFileMap,
-        projectRootMappings: (global as any).projectRootMappings,
-        targetProjectLocator: (global as any).targetProjectLocator,
-      }}`
-    );
+    // log(
+    //   info,
+    //   `Project info: ${JSON.stringify({
+    //     projectGraph: (global as any).projectGraph,
+    //     projectFileMap: (global as any).projectFileMap,
+    //     projectRootMappings: (global as any).projectRootMappings,
+    //     targetProjectLocator: (global as any).targetProjectLocator,
+    //   })}`
+    // );
 
     const proxy = getProxy(info);
 
@@ -71,12 +71,7 @@ function init(modules: { typescript: typeof ts }) {
       if (!prior) return;
 
       prior.entries = prior.entries.filter((entry) =>
-        filterEntryByEslintRule(
-          entry,
-          linter,
-          baseConfig,
-          fileName /**, info */
-        )
+        filterEntryByEslintRule(entry, linter, baseConfig, fileName, info)
       );
 
       return prior;
@@ -92,8 +87,8 @@ function filterEntryByEslintRule(
   entry: ts.CompletionEntry,
   linter: TSESLint.Linter,
   baseConfig: Linter.Config,
-  fileName: string
-  // info: ts.server.PluginCreateInfo
+  fileName: string,
+  info: ts.server.PluginCreateInfo
 ) {
   const canBeImported = entry.kindModifiers === "export";
 
