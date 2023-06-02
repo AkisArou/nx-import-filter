@@ -7,9 +7,12 @@
     "build": "tsc -p ."
   },
   "dependencies": {
+    "@nx/eslint-plugin": "^16.3.1",
     "@types/node": "^18.16.16",
     "comment-json": "^4.2.3",
     "strip-json-comments": "^5.0.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "@typescript-eslint/type-utils": "^5.58.0",
+    "@typescript-eslint/utils": "^5.58.0"
   }
 }
