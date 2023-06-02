@@ -1,17 +1,24 @@
 {
-  "name": "my-plugin",
+  "name": "nx-import-filter",
   "version": "0.0.1",
   "license": "MIT",
+  "repository": "https://github.com/AkisArou/nx-import-filter.git",
   "main": "./out",
+  "author": "AkisArou <akisarou90@gmail.com>",
   "scripts": {
     "build": "tsc -p ."
   },
   "dependencies": {
+    "comment-json": "^4.2.3"
+  },
+  "devDependencies": {
     "@nx/eslint-plugin": "^16.3.1",
     "@types/node": "^18.16.16",
-    "comment-json": "^4.2.3",
     "typescript": "^5.0.4",
     "@typescript-eslint/type-utils": "^5.58.0",
     "@typescript-eslint/utils": "^5.58.0"
-  }
+  },
+  "files": [
+    "out"
+  ]
 }

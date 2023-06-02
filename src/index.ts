@@ -8,7 +8,9 @@ import * as nxEslintPlugin from "@nx/eslint-plugin";
 import { Linter } from "@typescript-eslint/utils/dist/ts-eslint";
 import { ensureGlobalProjectGraph } from "./ensure-global-project-graph";
 
-function init(modules: { typescript: typeof ts }) {
+function init(modules: {
+  typescript: typeof import("typescript/lib/tsserverlibrary");
+}) {
   const ts = modules.typescript;
 
   function create(info: ts.server.PluginCreateInfo) {
