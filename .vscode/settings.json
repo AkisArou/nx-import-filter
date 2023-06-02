@@ -8,5 +8,6 @@
     "**/Thumbs.db": true,
     "USE_GITIGNORE": true
   },
-  "hide-files.files": []
+  "hide-files.files": [],
+  "cSpell.words": ["TSES", "tsserverlibrary"]
 }
