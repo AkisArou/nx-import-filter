@@ -3,22 +3,33 @@
   "version": "0.0.1",
   "license": "MIT",
   "repository": "https://github.com/AkisArou/nx-import-filter.git",
-  "main": "./out",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "author": "AkisArou <akisarou90@gmail.com>",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc"
   },
   "dependencies": {
     "comment-json": "^4.2.3"
   },
   "devDependencies": {
-    "@nx/eslint-plugin": "^16.3.1",
     "@types/node": "^18.16.16",
-    "typescript": "^5.0.4",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "nx": "^16.0.0",
+    "@nx/eslint-plugin": "^16.0.0",
     "@typescript-eslint/type-utils": "^5.58.0",
-    "@typescript-eslint/utils": "^5.58.0"
+    "@typescript-eslint/utils": "^5.58.0",
+    "eslint": "~8.15.0",
+    "prettier": "^2.6.2",
+    "@angular-devkit/architect": "*",
+    "webpack": "*"
   },
   "files": [
-    "out"
+    "dist"
   ]
 }
