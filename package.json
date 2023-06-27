@@ -11,25 +11,25 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc"
   },
-  "dependencies": {
-    "comment-json": "^4.2.3"
-  },
   "devDependencies": {
     "@types/node": "^18.16.16",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "nx": "^16.0.0",
+    "@angular-devkit/architect": "*",
     "@nx/eslint-plugin": "^16.0.0",
     "@typescript-eslint/type-utils": "^5.58.0",
     "@typescript-eslint/utils": "^5.58.0",
     "eslint": "~8.15.0",
+    "nx": "^16.0.0",
     "prettier": "^2.6.2",
-    "@angular-devkit/architect": "*",
     "webpack": "*"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "jsonc-parser": "^3.2.0"
+  }
 }
